@@ -1,8 +1,9 @@
-#include <iostream>
+#include <cstdio>
 
-int a = 0;
 
-int main(int argc, char** argv){
+int main(int argc, char** argv)
+{
+  int a = 0;
   scanf("%d", &a);
   printf("%d", (a-1)*5);
   return 0;
