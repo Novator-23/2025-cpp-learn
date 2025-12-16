@@ -15,20 +15,20 @@ typedef struct {
 }City;
 
 void init_wonder(Wonder* ptr, char* name, int year) {
-    ptr->name = malloc(sizeof(char) * strlen(name+1));
+    ptr->name = malloc(sizeof(char) * (strlen(name) + 1));
     strcpy(ptr->name, name);
     ptr->year = year;
 }
 
 void init_city(City* ptr, char* name, char* country) {
-    ptr->name = malloc(sizeof(char) * strlen(name+1));
+    ptr->name = malloc(sizeof(char) * (strlen(name) + 1));
     if (ptr->name == NULL) {
-        printf("Eror with memory");
+        printf("Error with memory");
     }
     strcpy(ptr->name, name);
-    ptr->country = malloc(sizeof(char) * strlen(country+1));
+    ptr->country = malloc(sizeof(char) * (strlen(country) + 1));
     if (ptr->country == NULL) {
-        printf("Eror with memory");
+        printf("Error with memory");
     }
     strcpy(ptr->country, country);
     ptr->count = 0;
